@@ -13,17 +13,14 @@ function init() {
 	camera.position.x = -7.5;
 	camera.position.y = 5.5;
 	camera.position.z = -4.0;
-
 	camera.target = new THREE.Vector3();
 
 	var loader = new THREE.ObjectLoader();
 	loader.load("models/json/scene2.json", function (loadedScene) {
 		scene = loadedScene;
 		scene.fog = new THREE.Fog(new THREE.Color(blueish), 20, 3);
-		//scene.fog = new THREE.FogExp2( 0x000000, 0.25 );
 
 		funnel = scene.children[1];
-
 		funnel.material = new THREE.MeshBasicMaterial({
 			color: greenish,
 			wireframe: true,
@@ -45,7 +42,6 @@ function onWindowResize() {
 	camera.aspect = window.innerWidth / window.innerHeight;
   camera.updateProjectionMatrix();
   renderer.setSize( window.innerWidth, window.innerHeight );
-	console.log("camera aspect: {}, fov: {}",  camera.aspect, camera.fov);
 }
 
 function animate() {
