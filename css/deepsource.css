@@ -117,17 +117,6 @@ nav {
   z-index: 1000;
 }
 
-nav a:before {
-  content: "";
-  position: relative;
-  left: calc(50%);
-  width: 0px;
-  top: -0.2em;
-  border-bottom: 1px solid var(--highlight);
-  display: block;
-  transition: all 0.6s ease;
-}
-
 nav a {
   display: inline-block;
   text-transform: uppercase;
@@ -139,23 +128,37 @@ nav a {
 @media (max-width:767px) {
   nav a {
     padding: 10px;
+    opacity: 0.9;
   }
 }
 
-nav a:focus:before,
-nav a:hover:before {
-  content: "";
-  left: 0%;
-  width: 100%;
-  display: block;
-  transition: all 0.2s ease;
-  box-shadow: 0 0 6px var(--highlight);
-}
+@media (min-width:768px) {
+  nav a:before {
+    content: "";
+    position: relative;
+    left: calc(50%);
+    width: 0px;
+    top: -0.2em;
+    border-bottom: 1px solid var(--highlight);
+    display: block;
+    transition: all 0.6s ease;
+  }
 
-nav a:focus,
-nav a:hover {
-  text-shadow: 0 0 10px var(--color);
-  box-shadow: 0;
+  nav a:focus:before,
+  nav a:hover:before {
+    content: "";
+    left: 0%;
+    width: 100%;
+    display: block;
+    transition: all 0.2s ease;
+    box-shadow: 0 0 6px var(--highlight);
+  }
+
+  nav a:focus,
+  nav a:hover {
+    text-shadow: 0 0 10px var(--color);
+    box-shadow: 0;
+  }
 }
 
 nav a img {
