@@ -63,7 +63,6 @@ scroll-container > * {
 }
 
 p {
-  text-align: justify;
   background: -webkit-linear-gradient(#fff, rgba(255,255,255, .5));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -151,6 +150,11 @@ nav a:focus,
 nav a:hover {
   text-shadow: 0 0 10px var(--color);
   box-shadow: 0;
+}
+
+nav a img {
+  height: 1em;
+  vertical-align: text-bottom;
 }
 
 .hover {
