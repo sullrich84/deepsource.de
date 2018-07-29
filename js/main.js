@@ -2,10 +2,6 @@ $(window).resize(function() {
   location.reload();
 });
 
-document.addEventListener('touchmove', function(e) {
-    e.preventDefault();
-}, { passive: false });
-
 $(document).ready(function() {
   $("nav a").mouseenter(function() {
     playSound($("#hover-sound")[0]);
