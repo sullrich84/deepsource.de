@@ -12,15 +12,17 @@ function init() {
 	camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 1000 );
 	camera.position.x = -7.5;
 	camera.position.y = 5.5;
-	camera.position.z = -4.0;
+	camera.position.z = -4.5;
 	camera.target = new THREE.Vector3();
 
 	var loader = new THREE.ObjectLoader();
-	loader.load("models/json/scene2.json", function (loadedScene) {
+	loader.load("models/json/deepsource.json", function (loadedScene) {
 		scene = loadedScene;
 		scene.fog = new THREE.Fog(new THREE.Color(blueish), 20, 3);
 
-		funnel = scene.children[1];
+		funnel = scene.children[0];
+		funnel.position.y = 1.5;
+		funnel.rotation.z = 2.0;
 		funnel.material = new THREE.MeshBasicMaterial({
 			color: greenish,
 			wireframe: true,

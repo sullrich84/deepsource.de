@@ -2,10 +2,10 @@
     "textures":[],
     "object":{
         "matrix":[1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1],
-        "uuid":"D56F372F-D239-43FB-99B9-04EE395D04FD",
+        "uuid":"4BBEB883-FA36-45E3-B5AC-704A3C48337B",
         "children":[{
             "name":"Camera",
-            "uuid":"B3B87467-1BC6-4283-8DEF-6E55FDD28FD6",
+            "uuid":"2A3E2D4D-5D98-4329-B2E4-DC202EE17D9E",
             "matrix":[-0.685921,0,0.727676,0,0.324013,0.895396,0.305421,0,-0.651558,0.445271,-0.61417,0,-7.48113,5.34367,-6.50764,1],
             "visible":true,
             "type":"PerspectiveCamera",
@@ -15,13 +15,13 @@
             "fov":28.8415
         },{
             "name":"Plane",
-            "uuid":"F0C59B21-72A6-4CAB-BE62-0FCFEFA9B3C1",
+            "uuid":"17F7C806-A33F-4D4F-913B-2137CB55004D",
             "matrix":[-1,0,0,0,0,0,1,0,0,1,0,0,0,1.95235,0,1],
             "visible":true,
             "type":"Mesh",
             "castShadow":false,
             "receiveShadow":false,
-            "geometry":"2F70139A-9818-467E-AED4-26A2955FF571"
+            "geometry":"D7708E3C-3595-47A0-9D23-B8B823AAE78A"
         }],
         "type":"Scene"
     },
@@ -50,8 +50,8 @@
                 }
             }
         },
-        "name":"PlaneGeometry",
-        "uuid":"2F70139A-9818-467E-AED4-26A2955FF571",
+        "name":"PlaneGeometry.1",
+        "uuid":"D7708E3C-3595-47A0-9D23-B8B823AAE78A",
         "type":"BufferGeometry"
     }],
     "materials":[],
