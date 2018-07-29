@@ -21,7 +21,6 @@
 
 html,
 body {
-  background-color: var(--background);
   color: var(--color);
   font-size: 1em;
   font-family: "Exo 2", sans-serif;
@@ -60,10 +59,10 @@ body {
 }
 
 #deepsource-animation {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
-  z-index: 0;
+  z-index: -1;
 }
 
 .container {
@@ -77,12 +76,7 @@ scroll-container {
   display: flex;
   flex-wrap: nowrap;
   overflow-x: hidden;
-  z-index: 0;
   flex: 1 1 auto;
-}
-
-scroll-container > * {
-  z-index: 9999;
 }
 
 p {
@@ -135,7 +129,6 @@ nav {
   padding: 0;
   width: 100%;
   text-align: center;
-  z-index: 1000;
   flex: 0 0 auto;
 }
 
@@ -157,7 +150,6 @@ nav a {
 @media (min-width:768px) {
   nav a:before {
     content: "";
-    position: relative;
     left: calc(50%);
     width: 0px;
     top: -0.2em;
