@@ -15,11 +15,8 @@
   font-smoothing: antialiased;
 }
 
-.no-overscroll {
-  width: 100vw;
-  height: 100vh;
-  overflow-y: scroll;
-  -webkit-overflow-scrolling: touch;
+*::-webkit-scrollbar {
+ display: none;
 }
 
 html,
@@ -69,14 +66,19 @@ body {
   z-index: 0;
 }
 
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 scroll-container {
-  position: relative;
-  height: 100%;
   scroll-behavior: smooth;
   display: flex;
   flex-wrap: nowrap;
   overflow-x: hidden;
   z-index: 0;
+  flex: 1 1 auto;
 }
 
 scroll-container > * {
@@ -133,9 +135,8 @@ nav {
   padding: 0;
   width: 100%;
   text-align: center;
-  position: fixed;
-  bottom: 0;
   z-index: 1000;
+  flex: 0 0 auto;
 }
 
 nav a {
@@ -213,7 +214,7 @@ nav a img {
 
 .main {
   align-self: center;
-  margin-bottom: 3em;
+  margin: auto;
   max-width: 400px;
   text-align: left;
   padding: 20px;
